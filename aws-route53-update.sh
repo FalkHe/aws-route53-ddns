@@ -62,7 +62,7 @@ function updateRecord() {
     local RR_TTL=300
 
     ## create tmp file
-    TMP_FILE=$(tempfile -p "aws-r53-ddns." -s ".json")
+    TMP_FILE=$(mktemp --suffix ".aws-r53-ddns.json")
     trap 'rm "${TMP_FILE}"' RETURN
 
     ## write resource record update to tmp file
