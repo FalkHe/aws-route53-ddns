@@ -15,6 +15,8 @@
 #############
 set -e
 
+cd "$(dirname "$0")"
+
 ## load .env
 . .env
 
