@@ -125,7 +125,7 @@ then
   CURRENT_IPv6=$(dig A +short ${AWS_R53_HOST_NAME} ${NS})
   if [ "${CURRENT_IPv6}" != "${IPv6}" ]
   then
-    updateRecord "A" "${IPv6}" && echo "[$(date)] Updated IPv6 / AAAA to ${IPv6}"
+    updateRecord "AAAA" "${IPv6}" && echo "[$(date)] Updated IPv6 / AAAA to ${IPv6}"
   else
     echo "[$(date)] IPv6 / AAAA is up to date (${IPv6})"
   fi
